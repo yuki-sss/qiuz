@@ -7,24 +7,24 @@ window.addEventListener("load", function () {
 
 const quiz = [
   {
-    question: "Q1 鳥は何色？",
-    answers: ["黒", "赤", "白", "緑"],
-    correct: "緑",
+    question: "Q1 ブラウザで前のページに戻るには？",
+    answers: ["Command + [", "Command + Q", "Command + Y", "Command + K"],
+    correct: "Command + [",
   },
   {
-    question: "soraは何色？",
-    answers: ["黒", "赤", "白", "緑"],
-    correct: "赤",
+    question: "アプリケーションを閉じるためには？",
+    answers: ["Command + Y", "Command + K", "Command + Q", "Command + M"],
+    correct: "Command + Q",
   },
   {
-    question: "髪は何色？",
-    answers: ["黒", "赤", "白", "緑"],
-    correct: "黒",
+    question: "ウィンドウを最小化するには？",
+    answers: ["Command + K", "Command + Y", "Command + M", "Command + Q"],
+    correct: "Command + M",
   },
   {
-    question: "米は何色？",
-    answers: ["黒", "赤", "白", "緑"],
-    correct: "白",
+    question: "履歴ページを開くには？",
+    answers: ["Command + Q", "Command + Y", "Command + K", "Command + M"],
+    correct: "Command + Y",
   },
 ];
 
@@ -63,6 +63,7 @@ const clickHandler = (e) => {
     window.alert(
       "終了！あなたの正解数は" + score + "/" + quizLength + "です！"
     );
+    location.reload(true);
   }
 };
 

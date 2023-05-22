@@ -6,3 +6,8 @@ body {
   justify-content: center;
   gap: 20px;
 }
+
+.answers > button {
+  color: red;
+  background-color: rgb(168, 201, 230);
+}
