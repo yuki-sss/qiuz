@@ -46,6 +46,11 @@ const setupQuiz = () => {
 };
 setupQuiz();
 
+// 10秒後にアラート
+setTimeout(function () {
+  window.alert("10秒経過。");
+}, 10000);
+
 const clickHandler = (e) => {
   if (quiz[quizIndex].correct === e.target.textContent) {
     window.alert("正解！");
@@ -58,6 +63,7 @@ const clickHandler = (e) => {
   if (quizIndex < quizLength) {
     //問題数があればこちらを実行
     setupQuiz();
+    clearTimeout(timeoutId);
   } else {
     //問題数がなければこちらを実行
     window.alert(
