@@ -1,6 +1,13 @@
+window.addEventListener("load", function () {
+  var bgm = document.getElementById("bgm");
+  bgm.volume = 0.3;
+  bgm.play();
+  bgm.loop = true;
+});
+
 const quiz = [
   {
-    question: "鳥は何色？",
+    question: "Q1 鳥は何色？",
     answers: ["黒", "赤", "白", "緑"],
     correct: "緑",
   },
@@ -49,8 +56,10 @@ const clickHandler = (e) => {
   quizIndex++;
 
   if (quizIndex < quizLength) {
+    //問題数があればこちらを実行
     setupQuiz();
   } else {
+    //問題数がなければこちらを実行
     window.alert(
       "終了！あなたの正解数は" + score + "/" + quizLength + "です！"
     );
