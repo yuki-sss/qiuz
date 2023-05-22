@@ -1,5 +1,5 @@
 window.addEventListener("load", function () {
-  var bgm = document.getElementById("bgm");
+  let bgm = document.getElementById("bgm");
   bgm.volume = 0.3;
   bgm.play();
   bgm.loop = true;
