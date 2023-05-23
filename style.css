@@ -11,3 +11,17 @@ body {
   color: red;
   background-color: rgb(168, 201, 230);
 }
+.qs {
+  font-size: 30px;
+  color: aliceblue;
+}
+
+.backBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 60px;
+  color: rgb(184, 184, 198);
+  text-decoration: none;
+  margin: 20px;
+}

@@ -35,9 +35,14 @@ let score = 0;
 const $button = document.getElementsByTagName("button");
 const buttonLength = $button.length;
 
+const quizCount = quiz.length;
+let quizCountNow = 1;
+
 //クイズの問題文。選択肢を定義
 const setupQuiz = () => {
   document.getElementById("js-question").textContent = quiz[quizIndex].question;
+  document.getElementById("questionCount").textContent =
+    "Question" + quizCountNow + "/" + quizCount;
   let buttonIndex = 0;
   while (buttonIndex < buttonLength) {
     $button[buttonIndex].textContent = quiz[quizIndex].answers[buttonIndex];
@@ -59,6 +64,7 @@ const clickHandler = (e) => {
     window.alert("不正解！");
   }
   quizIndex++;
+  quizCountNow++;
 
   if (quizIndex < quizLength) {
     //問題数があればこちらを実行
